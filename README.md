@@ -1,29 +1,84 @@
-Proyecto: Página web personal
+README – Instrucciones de Ejecución de la Aplicación Web
+1. Requisitos del sistema
 
-Autor: Diana Ramos Rodrigo
+Para ejecutar correctamente la aplicación web es necesario contar con los siguientes componentes instalados:
 
-Descripción
+Sistema operativo Linux (Ubuntu o similar)
 
-Este proyecto consiste en el desarrollo de una página web personal, elaborada como parte de una actividad académica para la Universidad Nacional de San Agustín (UNSA).
+Python 3.10 o superior
 
-La página web presenta información personal y académica, incluyendo datos sobre estudios, intereses y actividades realizadas. Su finalidad es mostrar el uso correcto de tecnologías web básicas y una estructura clara, ordenada y comprensible.
+Navegador web moderno (Chrome, Firefox, etc.)
 
-El sitio está diseñado para ser responsive, permitiendo una visualización adecuada en computadoras, tablets y dispositivos móviles, manteniendo una navegación sencilla e intuitiva.
+No se utilizan frameworks externos para el backend.
 
-Tecnologías utilizadas
+2. Estructura del proyecto
 
-HTML5 → estructura y contenido de la página web.
+El proyecto presenta la siguiente estructura de archivos y carpetas:
 
-CSS3 → estilos, diseño visual y adaptación responsive.
+TFI/
+│
+├── server.py
+├── index.html
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+│       └── (imágenes del sitio)
+│
+└── contacto.db
 
-JavaScript → interactividad básica y manipulación del DOM.
+3. Ejecución del servidor
 
-Características principales
+Abrir una terminal y ubicarse en la carpeta raíz del proyecto:
 
-Estructura semántica clara.
+cd Documentos/TFI
 
-Navegación simple.
 
-Diseño adaptable a distintos dispositivos.
+Ejecutar el servidor con el siguiente comando:
 
-Contenido organizado por secciones.
+python3 server.py
+
+
+El servidor se iniciará en la siguiente dirección:
+
+http://localhost:8000
+
+4. Uso de la aplicación
+
+Para acceder a la página principal:
+
+http://localhost:8000
+
+
+Para enviar un mensaje:
+
+Ingresar a la sección de contacto.
+
+Completar el formulario con los datos solicitados.
+
+Presionar el botón “Enviar”.
+
+Para visualizar los mensajes almacenados:
+
+http://localhost:8000/mensajes
+
+
+Se solicitarán credenciales de acceso:
+
+Usuario: admin
+
+Contraseña: 1234
+
+5. Base de datos
+
+La aplicación utiliza una base de datos local (contacto.db) que se crea automáticamente al iniciar el servidor por primera vez. En ella se almacenan los mensajes enviados desde el formulario de contacto.
+
+6. Observaciones
+
+El backend fue desarrollado utilizando Python puro mediante el módulo http.server.
+
+El manejo de rutas y formularios se realiza manualmente, sin el uso de frameworks.
+
+El acceso a los mensajes se encuentra protegido mediante autenticación básica.
